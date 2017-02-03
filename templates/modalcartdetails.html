@@ -1,0 +1,33 @@
+<!--Cart details-->
+<div class="addtocart-details">
+    <div class="modal fade" id="mycart" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h2 class="modal-title" id="myModalLabel">Items in cart</h2>
+                </div>
+                <div class="cartwrap">
+                    <div class="row">
+                        <ul class="thumbnails list-unstyled">
+                            <li class="col-xs-12">
+                                <div class="thumbnail" style="padding:0">
+                                    <div class="caption">
+                                        <h3>Items</h3>
+                                        <ol>
+                                            <li class="col-xs-12" ng-repeat="item in cardhistory track by $index">
+                                                <span>{{item.prod_name}}</span> - <span>{{item.prod_price | currency:"&#8377;:0"}}</span>
+                                                <button ng-click="removeitem($index)" class="btn btnlink">X</button>
+                                            </li>
+                                        </ol>
+                                        <h3>Total : {{getTotal() | currency:"&#8377;":0}}</h3>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,243 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+.maincontainer{
+	background-color: #007bc4;
+	overflow: hidden;
+}
+ 
+.logo{
+	font-family: 'Molle', cursive;
+    font-size: 47px;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+}
+.header-logo {
+	/*width: 20%;*/
+	float: left;
+}
+.header-links {
+    overflow: hidden;
+}
+.header-links ul{
+    float: right;
+    padding-right: 7%;
+    padding-top: 5px;
+}
+.header-links li {
+    float: left;
+    list-style: none;
+    margin: 0px 8px 0 16px;
+    color: #fff;
+}
+.search {
+	/*width: 50%;*/
+	float: left;
+	margin: 17px 0;
+	-webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+}
+.seach-icon{
+    background: #ffc120;
+    color: #444;
+}
+.loginwrap { 
+    /*width: 30%;*/
+    float: right;
+    color: #fff;
+    padding: 1% 2% 0;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+}
+/*.header-section{
+    padding-bottom: 16px;
+}*/
+.loginwrap ul{ 
+	float: left;
+    border-right: 1px solid #fff;
+    padding-right: 8px;
+}
+.cartimg{
+  float: left;
+  font-size: 20px;
+  padding: 3%;
+  position: relative;
+  cursor: pointer;
+}
+.cartimg .badge{
+    position: absolute;
+    top: -6px;
+    left: 14px;
+    background-color: #007bc4;
+}
+.loginwrap li{
+	list-style: none;
+ } 
+.productwrap {
+   /* width: 75%;
+    float: left;*/
+}
+.cartwrap {
+    /*width: 25%;
+    float: left;*/
+}
+.caption ol{
+	padding-left: 25px;
+  overflow: hidden;
+}
+.caption ol li{ 
+  padding-bottom: 5px;
+}
+.caption ol .btn{
+  float: right;
+}
+.error{
+	color: red;
+}
+.signclick:focus,.signclick:hover,.signclick{
+	color: #fff!important;
+}
+.slick-dots li button{
+	background: #ccc;
+    border-radius: 16px;
+ }
+.slick-dots li button:before
+{
+    font-size: 20px;
+    line-height: 20px;
+    background: #000;
+	border-radius: 16px;
+}
+.slick-dots{
+	bottom: -34px;
+}
+.slick-dots li button:before{
+	content: " ";
+}
+.header-links a:focus,.header-links a:hover,.header-links a{
+    color: #fff!important;
+    text-decoration: none;
+}
+.slick-prev{ 
+    margin:30px;
+}
+.slick-prev:before{
+  content:"\e257";
+  font-family:"Glyphicons Halflings";
+  line-height:1;
+  margin:10px;
+  display:inline-block;
+  color: #000;
+  font-size: 40px;
+}
+.slick-next{ 
+    margin: 24px 51px;
+    right: 0;
+}
+.slick-next:before{
+  content:"\e258";
+  font-family:"Glyphicons Halflings";
+  line-height:1;
+  margin:10px;
+  display:inline-block;
+  color: #000;
+  font-size: 40px;
+}
+.slick-prev, .slick-next{
+    top: 35%;
+}
+
+.maincontainer.shrink { 
+    position: fixed;
+  	z-index: 1;
+  	width: 100%;
+}
+.maincontainer.shrink .logo{
+	font-size: 43px;
+	-webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+}
+.maincontainer.shrink .search{
+	margin: 15px 0;
+	-webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+}
+.maincontainer.shrink .loginwrap {
+    padding: 1% 2% 0;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+}
+.products-category li{
+	display: inline-block;
+    padding: 1px 6px;
+    border-right: 1px solid #ddd
+}
+.product-cat{
+	display: inline-block;
+}
+/*footer*/
+.footerwrapper {
+  background-color: #ccc;
+  margin-top: 2%;
+  padding: 2%;
+}
+.error-border{
+  border: 1px solid red;
+}
+.header-logo a{
+  text-decoration: none;
+}
+.header-logo a:hover,.header-logo a:focus{
+  text-decoration: none;
+}
+#return-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: rgb(0, 0, 0);
+    background: rgba(0, 0, 0, 0.7);
+    width: 50px;
+    height: 50px;
+    display: block;
+    text-decoration: none;
+    -webkit-border-radius: 35px;
+    -moz-border-radius: 35px;
+    border-radius: 35px;
+    display: none;
+    -webkit-transition: all 0.3s linear;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+#return-to-top i {
+    color: #fff;
+    margin: 0;
+    position: relative;
+    left: 16px;
+    top: 13px;
+    font-size: 19px;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+ 
+#return-to-top:hover i {
+    color: #fff;
+    top: 5px;
+}
+.icon-chevron-up:before {
+    content: "\f077";
+}

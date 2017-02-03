@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html ng-app="myShop">
+
+<head>
+    <title>Shopping Cart</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="bower_components/slick-carousel/slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="bower_components/slick-carousel/slick/slick-theme.css" />
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <script type="text/javascript" src="bower_components/jquery/dist/jquery.js"></script>
+    <script type="text/javascript" src="bower_components/angular/angular.js"></script>
+    <script type="text/javascript" src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <script type="text/javascript" src="bower_components/slick-carousel/slick/slick.js"></script>
+    <script type="text/javascript" src="bower_components/angular-slick/dist/slick.js"></script>
+    <script type="text/javascript" src="bower_components/angular/angular-route.js"></script>
+    <script type="text/javascript" src="js/app.js"></script>
+    <script type="text/javascript" src="../app/js/route.js"></script>
+    <script type="text/javascript" src="../app/js/angular-resource.js"></script>
+	<script type="text/javascript" src="../app/js/directives/footer.js"></script> 
+	<script type="text/javascript" src="../app/js/controllers/homeController.js"></script>
+	<script type="text/javascript" src="../app/js/controllers/mobileController.js"></script>
+	<script type="text/javascript" src="../app/js/controllers/productNav.js"></script>
+	<script type="text/javascript" src="../app/js/directives/proddisplay.js"></script> 
+</head>
+
+<body>
+    <div class="maincontainer">
+        <div class="container">
+            <!--Header section-->
+            <div class="header-section">
+                <div class="header-links">
+                    <ul>
+                        <li><span class="glyphicon glyphicon-gift"></span><a href="javascript:;"> Gift Card</a></li>
+                        <li><span class="glyphicon glyphicon-map-marker"></span><a href="javascript:;"> Store Locator</a></li>
+                        <li><span class="glyphicon glyphicon-calendar"></span> <a href="javascript:;"> Monthly Ads</a></li>
+                        <li><span class="glyphicon glyphicon-exclamation-sign"></span><a href="javascript:;"> Help</a></li>
+                        <li><span class="glyphicon glyphicon-user"></span><a href="javascript:;"> Contact us</a></li>
+                    </ul>
+                </div>
+                <div class="row">
+                    <div class="header-logo col-sm-2">
+                        <a href="#/home"><h2 class="logo">Shopify</h2></a>
+                    </div>
+                    <div class="search col-sm-7">
+                        <input class="form-control" type="search" name="search" placeholder="Search for your products">
+                    </div>
+                    <div class="loginwrap col-sm-3">
+                        <ul>
+                            <li><a class="signclick" data-toggle="modal" data-target="#myModal" href="javascript:;">Hello, SignIn</a>
+                                <br>
+                            </li>
+                            <li>My Account</li>
+                        </ul>
+                        <div class="cartimg">
+                            <p data-toggle="modal" data-target="#mycart"><span class="glyphicon glyphicon-shopping-cart"></span> Cart
+                                <span class="badge">{{totalitems}}</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="products-category" ng-controller="productNav">
+        <div class="container">
+            <span>Go quickly to <i class="glyphicon glyphicon-forward"></i></span>
+            <ul class="product-cat">
+                <li ng-repeat="productcat in productCategory">
+                    <a ng-href={{productcat.url}}> {{productcat.title}}</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div>
+        <a href="javascript:" id="return-to-top"><i class="glyphicon glyphicon-chevron-up"></i></a>
+    </div>
+
+
+<!--Registration Form-->
+<div class="modal fade" tabindex="-1" role="dialog" id="myModal">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">Login/Sign Up On Googie</h4>
+            </div>
+            <div class="modal-body">
+                <form name="profileForm">
+                    <div class="form-group">
+                        <label>User Name *</label>
+                        <i class="glyphicon glyphicon-user"></i>
+                        <input class="form-control" type="text" name="user_name" placeholder="Enter your name" ng-model="user.user_name" ng-maxlength="10" ng-required="true">
+                        <span class="error" ng-show="profileForm.user_name.$invalid && profileForm.user_name.$dirty">Please enter character below 10</span>
+                    </div>
+                    <div class="form-group">
+                        <label>Email *</label>
+                        <i class="glyphicon glyphicon-envelope"></i>
+                        <input class="form-control" type="email" name="user_email" placeholder="Enter your Email" ng-model="user.user_email" ng-required="true">
+                        <span class="error" ng-show="profileForm.user_email.$invalid && profileForm.user_email.$dirty">Please enter the email</span>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label>Age</label>
+                                <i class="glyphicon glyphicon-dashboard"></i>
+                                <input class="form-control" type="Number" name="user_age" placeholder="Age" ng-model="user.user_age" ng-min="18" ng-required="true">
+                                <span class="error" ng-show="profileForm.user_age.$invalid && profileForm.user_age.$dirty">Age should be above 18</span>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label>Mobile *</label>
+                                <i class="glyphicon glyphicon-phone"></i>
+                                <input class="form-control" type="number" name="user_mobile" placeholder="Mobile Number" ng-model="user.user_mobile">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Password *</label>
+                        <i class="glyphicon glyphicon-lock"></i>
+                        <input class="form-control" type="password" name="user_pass" placeholder="New passowrd" ng-model="user.user_pass" ng-pattern="user.user_cpass">
+                    </div>
+                    <div class="form-group">
+                        <label>Confirm Password *</label>
+                        <i class="glyphicon glyphicon-lock"></i>
+                        <input class="form-control" type="password" name="user_cpass" placeholder="Confirm password" ng-model="user.user_cpass" ng-pattern="user.user_pass">
+                    </div>
+                    <button class="btn btn-primary" ng-disabled="profileForm.$invalid">Submit</button>
+                </form>
+            </div>
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+</div>
+<!-- /.modal -->
+    <!--Cart details-->
+    <modalcartdetails> </modalcartdetails>
+
+    <div ng-view></div>
+    <footerarea></footerarea>
+
+    <!-- <script type="text/javascript" src="../app/js/controllers/addtocartctrl.js"></script> -->
+    <script type="text/javascript">
+    // ===== Scroll to Top ==== 
+    $(window).scroll(function() {
+        if ($(this).scrollTop() >= 100) { // If page is scrolled more than 50px
+            $('#return-to-top').fadeIn(200); // Fade in the arrow
+        } else {
+            $('#return-to-top').fadeOut(200); // Else fade out the arrow
+        }
+    });
+    $('#return-to-top').click(function() { // When arrow is clicked
+        $('body,html').animate({
+            scrollTop: 0 // Scroll to top of body
+        }, 500);
+    });
+    </script>
+</body>
+
+</html>

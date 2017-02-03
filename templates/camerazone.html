@@ -1,0 +1,30 @@
+	<div class="innerwrap container" ng-controller="productController"> 
+
+
+		<div class="productwrap">
+			<div class="row"> 
+			<h2>Camera Zone</h2>
+				<ul class="thumbnails list-unstyled"> 
+					<li class="col-md-2" ng-repeat="mobile in productsMobile">
+						<categorylist content="mobile" index="$index"></categorylist>
+					</li>  
+				</ul>
+			</div>
+		</div> 
+		 
+
+		<div class="productwrap">
+			<div class="row"> 
+			<h2>Deal of the day</h2>
+				<ul class="thumbnails list-unstyled"> 
+					<li class="col-md-2" ng-repeat="shoe in productsShoes">
+						<categorylist content="shoe" index="$index"></categorylist>
+					</li>  
+				</ul>
+			</div>
+		</div> 
+
+		<!--Cart details-->
+		<modalcartdetails> </modalcartdetails>
+
+	</div>
