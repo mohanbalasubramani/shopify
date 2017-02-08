@@ -1,36 +1,36 @@
 [{
 "section1":{
-    "section_title": "Deal of the day1",
+    "section_title": "Deals of the Day",
     "section_prods": [{
-            "prod_img": "img/prod_img.png",
-            "prod_name": "Nokia",
-            "prod_description": "Nokia Phone",
-            "prod_price": "34535",
+            "prod_img": "img/homeimg/1.jpeg",
+            "prod_name": "Bags, Wallets & Belts",
+            "prod_description": "Bags, Wallets & Belts",
+            "prod_price": "2500",
             "prod_button": "Add to Card"
         },
          {
-            "prod_img": "img/prod_img.png",
+            "prod_img": "img/homeimg/2.jpeg",
             "prod_name": "Nokia",
             "prod_description": "Nokia Phone",
             "prod_price": "34534",
             "prod_button": "Add to Card"
         },
          {
-            "prod_img": "img/prod_img.png",
+            "prod_img": "img/homeimg/1.jpeg",
             "prod_name": "Nokia",
             "prod_description": "Nokia Phone",
             "prod_price": "5678",
             "prod_button": "Add to Card"
         },
         {
-            "prod_img": "img/prod_img.png",
+            "prod_img": "img/homeimg/2.jpeg",
             "prod_name": "Nokia",
             "prod_description": "Nokia Phone",
             "prod_price": "47657",
             "prod_button": "Add to Card"
         },
         {
-            "prod_img": "img/prod_img.png",
+            "prod_img": "img/homeimg/1.jpeg",
             "prod_name": "Nokia",
             "prod_description": "Nokia Phone",
             "prod_price": "76544",
@@ -46,7 +46,7 @@
     ]
 },
 "section2":{
-    "section_title": "Deal of the day2",
+    "section_title": "Best of Fashion & Lifestyle",
     "section_prods": [{
             "prod_img": "img/prod_img.png",
             "prod_name": "Nokia",
@@ -92,7 +92,53 @@
     ]
 },
 "section3":{
-    "section_title": "Deal of the day3",
+    "section_title": "Discounts for You",
+    "section_prods": [{
+            "prod_img": "img/prod_img.png",
+            "prod_name": "Nokia",
+            "prod_description": "Nokia Phone",
+            "prod_price": "74556",
+            "prod_button": "Add to Card"
+        },
+         {
+            "prod_img": "img/prod_img.png",
+            "prod_name": "Nokia",
+            "prod_description": "Nokia Phone",
+            "prod_price": "46456",
+            "prod_button": "Add to Card"
+        },
+         {
+            "prod_img": "img/prod_img.png",
+            "prod_name": "Nokia",
+            "prod_description": "Nokia Phone",
+            "prod_price": "54645",
+            "prod_button": "Add to Card"
+        },
+        {
+            "prod_img": "img/prod_img.png",
+            "prod_name": "Nokia",
+            "prod_description": "Nokia Phone",
+            "prod_price": "45643",
+            "prod_button": "Add to Card"
+        },
+        {
+            "prod_img": "img/prod_img.png",
+            "prod_name": "Nokia",
+            "prod_description": "Nokia Phone",
+            "prod_price": "45677",
+            "prod_button": "Add to Card"
+        },
+        {
+            "prod_img": "img/prod_img.png",
+            "prod_name": "Nokia",
+            "prod_description": "Nokia Phone",
+            "prod_price": "4567",
+            "prod_button": "Add to Card"
+        }
+    ]
+},
+"section4":{
+    "section_title": "Trending Products",
     "section_prods": [{
             "prod_img": "img/prod_img.png",
             "prod_name": "Nokia",
