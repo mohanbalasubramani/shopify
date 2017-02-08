@@ -241,3 +241,10 @@
 .icon-chevron-up:before {
     content: "\f077";
 }
+.thumbnail{
+  border: none;
+}
+.prod_img img {
+    width: 100%;
+    max-height: 250px;
+}
