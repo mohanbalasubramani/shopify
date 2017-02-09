@@ -1,31 +1,33 @@
-	<div class="innerwrap container" ng-controller="productController"> 
-
-
-		<div class="productwrap">
-			<div class="row"> 
-			<h2>Kids Zone</h2>
-				<ul class="thumbnails list-unstyled"> 
-					<li class="col-md-2" ng-repeat="mobile in productsMobile">
-						<categorylist content="mobile" index="$index"></categorylist>
-					</li>  
-				</ul>
-			</div>
-		</div> 
-		 
-
-		<div class="productwrap">
-			<div class="row"> 
-			<h2>Deal of the day</h2>
-				<ul class="thumbnails list-unstyled"> 
-					<li class="col-md-2" ng-repeat="shoe in productsShoes">
-						<categorylist content="shoe" index="$index"></categorylist>
-					</li>  
-				</ul>
-			</div>
-		</div> 
-		<!--Cart details-->
-		<modalcartdetails> </modalcartdetails>
-		 
-
-
-	</div>
+<!--Product list-->
+<div class="innerwrap container">
+    <div class="productwrap">
+        <div class="row">
+            <h2>{{data.section1.section_title}}</h2>
+            <slick dots=true arrow=true responsive=breakpoints slides-to-show=6 slides-to-scroll=1 infinite=false>
+                <div class="col-md-2 col-sm-3" ng-repeat="products in data.section1.section_prods">
+                    <proddisplay></proddisplay>
+                </div>
+            </slick>
+        </div>
+    </div>
+    <div class="productwrap">
+        <div class="row">
+            <h2>{{data.section2.section_title}}</h2>
+            <slick dots=true arrow=true responsive=breakpoints slides-to-show=6 slides-to-scroll=1 infinite=false>
+                <div class="col-md-2 col-sm-3" ng-repeat="products in data.section1.section_prods">
+                    <proddisplay></proddisplay>
+                </div>
+            </slick>
+        </div>
+    </div>
+    <div class="productwrap">
+        <div class="row">
+            <h2>{{data.section3.section_title}}</h2>
+            <slick dots=true arrow=true responsive=breakpoints slides-to-show=6 slides-to-scroll=1 infinite=false>
+                <div class="col-md-2 col-sm-3" ng-repeat="products in data.section1.section_prods">
+                    <proddisplay></proddisplay>
+                </div>
+            </slick>
+        </div>
+    </div>
+</div>
