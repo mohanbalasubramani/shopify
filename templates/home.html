@@ -22,7 +22,7 @@
     <div class="productwrap">
         <div class="row">
             <h2>{{data.section2.section_title}}</h2>
-            <slick settings="slickConfig3" ng-if="slickConfig3Loaded">
+            <slick settings="slickConfig3" ng-if="slickConfig3Loaded" slides-to-show=6 slides-to-scroll=6>
                 <div class="col-md-2 col-sm-3" ng-repeat="products in data.section2.section_prods">
                     <proddisplay></proddisplay>
                 </div>
@@ -32,7 +32,7 @@
     <div class="productwrap">
         <div class="row">
             <h2>{{data.section3.section_title}}</h2>
-            <slick settings="slickConfig3" ng-if="slickConfig3Loaded" >
+            <slick settings="slickConfig3" ng-if="slickConfig3Loaded" slides-to-show=6 slides-to-scroll=6>
                 <div class="col-md-2 col-sm-3" ng-repeat="products in data.section3.section_prods">
                     <proddisplay></proddisplay>
                 </div>
@@ -42,7 +42,7 @@
      <div class="productwrap">
         <div class="row">
             <h2>{{data.section4.section_title}}</h2>
-            <slick  settings="slickConfig3" ng-if="slickConfig3Loaded" >
+            <slick  settings="slickConfig3" ng-if="slickConfig3Loaded" slides-to-show=6 slides-to-scroll=6>
                 <div class="col-md-2 col-sm-3" ng-repeat="products in data.section4.section_prods">
                     <proddisplay></proddisplay>
                 </div>
